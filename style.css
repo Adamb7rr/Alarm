@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #344e41;
+}
+.btn-6 {
+    background: rgb(247,150,192);
+    background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+.btn-6 span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+    position: absolute;
+    content: "";
+    height: 0%;
+    width: 1px;
+    box-shadow:
+        -1px -1px 20px 0px rgba(255,255,255,1),
+        -4px -4px 5px 0px rgba(255,255,255,1),
+        7px 7px 20px 0px rgba(0,0,0,.4),
+        4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6:before {
+    right: 0;
+    top: 0;
+    transition: all 500ms ease;
+}
+.btn-6:after {
+    left: 0;
+    bottom: 0;
+    transition: all 500ms ease;
+}
+.btn-6:hover{
+    background: transparent;
+    color: #76aef1;
+    box-shadow: none;
+}
+.btn-6:hover:before {
+    transition: all 500ms ease;
+    height: 100%;
+}
+.btn-6:hover:after {
+    transition: all 500ms ease;
+    height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+    position: absolute;
+    content: "";
+    box-shadow:
+        -1px -1px 20px 0px rgba(255,255,255,1),
+        -4px -4px 5px 0px rgba(255,255,255,1),
+        7px 7px 20px 0px rgba(0,0,0,.4),
+        4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6 span:before {
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+}
+.btn-6 span:after {
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: .5px;
+    transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+    width: 100%;
+}
+.btn-6 span:hover:after {
+    width: 100%;
+}
+
+.container {
+    background-color: #588157;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #dad7cd;
+}
+
+#clock {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#set-alarm input, #set-alarm select, #set-alarm  {
+    margin: 5px;
+    padding: 10px; 
+    border: 2px solid #344e41;
+    border-radius: 10px;
+    background: #dad7cd;
+}
+
+#alarms-list {
+    margin-top: 20px;
+}
+
+#alarms {
+    list-style: none;
+    padding: 0;
+}
+
+#alarms li {
+    margin: 3px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#alarms li  {
+    background-color: #fb6f92;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#but {
+    font-size: 48px;
+    text-align: center;
+}
+
+#stopButton {
+    display: none;
+    margin-top: 10px;
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#stopButton:hover {
+    background-color: #d32f2f;
+}
+
+.button-49,
+.button-49:after {
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00E6F6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-top: 10px;
+}
+
+.button-49:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    
+    content: 'ALTERNATE TEXT';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+    clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .button-49,
+    .button-49:after {
+        width: 200px;
+        height: 86px;
+        line-height: 88px;
+    }
+}
+
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-85:before {
+    content: "";
+    background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
